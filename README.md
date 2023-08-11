@@ -1,3 +1,7 @@
+<h1 style="text-align: center;">Meet CC50</h1>
+
+Este é um projeto Open Source desenvolvido pelos monitores do curso CC50 de Havard no Brasil. Com foco em criar uma plataforma de conexão entre os monitores e alunos do curso e facilitar o contato entre os mesmos.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
