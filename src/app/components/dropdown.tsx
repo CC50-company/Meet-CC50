@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { BsChevronDown } from 'react-icons/bs';
 
 interface DropdownItem {
@@ -14,13 +14,34 @@ interface Props {
 
 const Dropdown: React.FC<Props> = ({ title, items }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeDropdown = () => {
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        closeDropdown();
+      }
+    };
+
+    if (isOpen) {
+      document.body.addEventListener('click', handleOutsideClick);
+    }
+
+    return () => {
+      document.body.removeEventListener('click', handleOutsideClick);
+    };
+  }, [isOpen]);
+
   return (
-    <div className="relative">
+    <div className="relative" ref={dropdownRef}>
       <button
         onClick={toggleDropdown}
         className="flex items-center text-400 hover:text--900 focus:outline-none"

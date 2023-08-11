@@ -17,9 +17,9 @@ const App: React.FC = () => {
     { label: '9. HTML, CSS, Javascript', href: '/web-development' },
   ];
   const navLinks = [
-    { label: 'FAQ', url: '/' },
-    { label: 'Acesse o CC50', url: '/about' },
-    { label: 'Discord', url: '/about' },
+    
+    { label: 'Acesse o CC50', url: 'https://perfil.napratica.org.br/e/pt-BR/auth?continue_to=https://perfil.napratica.org.br/e/ead/sso' },
+    { label: 'Discord', url: 'https://discord.gg/axDzw2bzmg' },
   ];
 
   return (
@@ -35,8 +35,7 @@ const App: React.FC = () => {
       </div>
       <Section
         
-        mediumText="Veja os monitores que estão ao vivo"
-      />
+        mediumText="Veja os monitores que estão ao vivo" largeText={''}      />
       <ExternalLinkButtonGrid />
 
     </div>
