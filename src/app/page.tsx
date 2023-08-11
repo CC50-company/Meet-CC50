@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Section from './components/Sections';
-
+import ExternalLinkButtonGrid from './components/matrizbuttons';
 const App: React.FC = () => {
   const navLinks = [
     { label: 'FAQ', url: '/' },
@@ -16,6 +16,8 @@ const App: React.FC = () => {
         largeText="Temos monitores(a) ao vivo para tirar suas dúvidas"
         mediumText="Selecione abaixo qual módulo você tem dúvida"
       />
+      <ExternalLinkButtonGrid />
+     
     </div>
   );
 };
