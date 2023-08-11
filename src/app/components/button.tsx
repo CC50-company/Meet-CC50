@@ -1,6 +1,11 @@
 import React from 'react';
 
-const ExternalLinkButton = ({ url, label }) => {
+interface ExternalLinkButtonProps {
+  url: string;
+  label: string;
+}
+
+const ExternalLinkButton: React.FC<ExternalLinkButtonProps> = ({ url, label }) => {
   return (
     <div className="flex items-center justify-center mt-6 mb-4">
       <a
