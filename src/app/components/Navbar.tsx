@@ -1,8 +1,9 @@
 "use client"
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 interface NavbarProps {
-  links: { label: string; url: string }[];
+  links: { label: string; url: string, img: any, alt: string }[];
 }
 
 const Navbar: React.FC<NavbarProps> = ({ links }) => {
@@ -15,12 +16,12 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
   return (
     <nav className="bg-gray-0 p-4 lg:p-9">
       <div className="flex items-center justify-between">
-        <div className="text-white font-bold text-lg md:text-3xl lg:text-4xl xl:text-5xl">CC50</div>
+        <div className="font-bold text-lg md:text-3xl lg:text-4xl xl:text-5xl">CC50</div>
         {/* Menu responsivo para telas menores */}
         <div className="lg:hidden">
           <button
             onClick={toggleMenu}
-            className="text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+            className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
           >
             <span className="sr-only">Toggle navigation</span>
             <svg
@@ -45,8 +46,9 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
             <li key={index}>
               <a
                 href={link.url}
-                className="text-white text-md lg:text-lg xl:text-xl transition-colors duration-300 hover:text-gray-300"
-              >
+                className="flex justify-between gap-2 text-md lg:text-lg xl:text-xl transition-colors duration-300 hover:text-gray-300"
+                >
+                <Image {... link.img} width={30} height={30} alt={link.alt}/>
                 {link.label}
               </a>
             </li>
@@ -55,13 +57,14 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
       </div>
       {/* Menu deslizável para telas menores */}
       <div className={`lg:hidden mt-4 ${menuOpen ? 'block' : 'hidden'}`}>
-        <ul className="space-y-2">
+        <ul className="space-y-2 float-right">
           {links.map((link, index) => (
-            <li key={index}>
+            <li key={index} className=''>
               <a
                 href={link.url}
-                className="text-white text-md lg:text-lg xl:text-xl transition-colors duration-300 hover:text-gray-300 block"
+                className="flex gap-2 text-md lg:text-lg xl:text-xl transition-colors duration-300 hover:text-gray-300"
               >
+              <Image {... link.img} width={30} height={30} alt={link.alt}/>
                 {link.label}
               </a>
             </li>
