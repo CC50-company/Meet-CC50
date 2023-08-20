@@ -5,15 +5,15 @@ import ExternalLinkButton from '../components/button';
 const ExternalLinkButtonGrid = () => {
   // Dados para os links externos
   const externalLinks = [
-    { url: 'https://www.example1.com', label: '1.Scratch' },
-    { url: 'https://www.example2.com', label: '2.C' },
-    { url: 'https://www.example3.com', label: '3.Arrays' },
-    { url: 'https://www.example4.com', label: '4.Algoritmos' },
-    { url: 'https://www.example5.com', label: '5.Memória' },
-    { url: 'https://www.example6.com', label: '6.Estrutura de Dados' },
-    { url: 'https://www.example7.com', label: '7.Python' },
-    { url: 'https://www.example8.com', label: '8.SQL' },
-    { url: 'https://www.example9.com', label: '9.HTML,CSS,Javascript' },
+    { url: 'https://www.example1.com', label: '0.Scratch' },
+    { url: 'https://www.example2.com', label: '1.C' },
+    { url: 'https://www.example3.com', label: '2.Arrays' },
+    { url: 'https://www.example4.com', label: '3.Algoritmos' },
+    { url: 'https://www.example5.com', label: '4.Memória' },
+    { url: 'https://www.example6.com', label: '5.Estrutura de Dados' },
+    { url: 'https://www.example7.com', label: '6.Python' },
+    { url: 'https://www.example8.com', label: '7.SQL' },
+    { url: 'https://www.example9.com', label: '8.HTML,CSS,Javascript' },
   ];
 
   return (
