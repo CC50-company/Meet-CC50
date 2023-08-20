@@ -15,12 +15,12 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
   return (
     <nav className="bg-gray-0 p-4 lg:p-9">
       <div className="flex items-center justify-between">
-        <div className="text-white font-bold text-lg md:text-3xl lg:text-4xl xl:text-5xl">CC50</div>
+        <div className="font-bold text-lg md:text-3xl lg:text-4xl xl:text-5xl">CC50</div>
         {/* Menu responsivo para telas menores */}
         <div className="lg:hidden">
           <button
             onClick={toggleMenu}
-            className="text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+            className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
           >
             <span className="sr-only">Toggle navigation</span>
             <svg
@@ -45,7 +45,7 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
             <li key={index}>
               <a
                 href={link.url}
-                className="text-white text-md lg:text-lg xl:text-xl transition-colors duration-300 hover:text-gray-300"
+                className="text-md lg:text-lg xl:text-xl transition-colors duration-300 hover:text-gray-300"
               >
                 {link.label}
               </a>
@@ -60,7 +60,7 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
             <li key={index}>
               <a
                 href={link.url}
-                className="text-white text-md lg:text-lg xl:text-xl transition-colors duration-300 hover:text-gray-300 block"
+                className="text-md lg:text-lg xl:text-xl transition-colors duration-300 hover:text-gray-300 block"
               >
                 {link.label}
               </a>

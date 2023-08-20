@@ -17,9 +17,9 @@ const ExternalLinkButtonGrid = () => {
   ];
 
   return (
-    <div className="grid grid-cols-3 gap-2">
+    <div className="flex flex-wrap justify-around mx-auto max-w-7xl"/* "grid md:grid-cols-2 lg:grid-cols-3 gap-2 " */>
       {externalLinks.map((link, index) => (
-        <div key={index} className="mb-2">
+        <div key={index} className="mb-2 mx-5">
           <ExternalLinkButton url={link.url} label={link.label} />
         </div>
       ))}

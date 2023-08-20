@@ -41,20 +41,20 @@ const Dropdown: React.FC<Props> = ({ title, items }) => {
   }, [isOpen]);
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="relative max-w-xs" ref={dropdownRef}>
       <button
         onClick={toggleDropdown}
-        className="flex items-center text-400 hover:text--900 focus:outline-none"
+        className="flex items-center w-max border-2 border-black dark:border-gray-300 py-3 px-14 rounded-lg text-400 hover:text--900 focus:outline-none"
       >
         <span className="hover:text-white-900">{title}</span>
         <BsChevronDown className={`ml-2 ${isOpen ? 'transform rotate-180' : ''}`} />
       </button>
       {isOpen && (
-        <div className="absolute mt-2 w-48 bg-white border rounded shadow-lg max-h-56 overflow-y-auto">
+        <div className="absolute mt-2 w-max bg-white border rounded shadow-lg max-h-56 overflow-y-auto">
           <ul>
             {items.map((item, index) => (
-              <li key={index} className="px-4 py-2">
-                <a href={item.href} className="text-gray-700 hover:text-gray-900">
+              <li key={index} className="px-4 py-2 hover:bg-gray-600 text-gray-700 hover:text-white">
+                <a href={item.href}>
                   {item.label}
                 </a>
               </li>
