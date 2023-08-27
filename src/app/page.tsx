@@ -6,6 +6,8 @@ import Dropdown from './components/dropdown';
 import DiscordLogo from "./components/images/discord.svg";
 import NaPraticaLogo from "./components/images/naPraticaLogo.png";
 
+import SEO from './PWA/SEO';
+
 const App: React.FC = () => {
   const dropdownItems = [
     { label: '0. Scratch', href: '/' },
@@ -26,6 +28,8 @@ const App: React.FC = () => {
 
   return (
     <div>
+      <SEO title='Meet CC50' description='Uma página para se conectar com os monitores' />
+      
       <Navbar links={navLinks} />
       <Section
         largeText="Temos monitores(as) ao vivo para tirar suas dúvidas"

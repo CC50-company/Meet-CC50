@@ -1,0 +1,11 @@
+{
+    "name": "Meet CC50",
+    "short_name": "Meet CC50",
+    "description": "Meet CC50",
+    "theme_color": "#FFFFFF",
+    "background_color": "#FFFFFF",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "lang": "pt-BR"
+}
