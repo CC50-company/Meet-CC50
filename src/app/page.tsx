@@ -4,7 +4,7 @@ import Section from './components/Sections';
 import ExternalLinkButtonGrid from './components/matrizbuttons';
 import Dropdown from './components/dropdown';
 import DiscordLogo from "./components/images/discord.svg";
-import NaPraticaLogo from "./components/images/naPraticaLogo.png";
+import CC50 from "./components/images/cc50.svg";
 
 const App: React.FC = () => {
     {/* 
@@ -21,7 +21,7 @@ const App: React.FC = () => {
   ]; */}
   const navLinks = [
     
-    { label: 'Acesse o CC50', url: 'https://perfil.napratica.org.br/e/pt-BR/auth?continue_to=https://perfil.napratica.org.br/e/ead/sso', img: NaPraticaLogo, alt: 'Na Prática logo.'},
+    { label: '< Acesse o CC50 /> ', url: 'https://perfil.napratica.org.br/e/pt-BR/auth?continue_to=https://perfil.napratica.org.br/e/ead/sso', img: CC50, alt: 'Na Prática logo.'},
     { label: 'Discord', url: 'https://discord.gg/axDzw2bzmg', img: DiscordLogo, alt: 'Discord logo.'},
   ];
   const externalLinks = [
